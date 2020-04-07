@@ -1,0 +1,31 @@
+[7234][environment] CWD = /home/andreeac/git/race-fix/examples/race/pfix
+[7234][environment] No .inferconfig file found
+[7234][environment] Project root = /home/andreeac/git/race-fix/examples/race/pfix
+[7234][environment] INFER_ARGS =   
+[7234][environment] command line arguments:   infer -- javac StringBuffer.java
+[7234][environment] Available memory at startup: 63118 MB
+[7234][environment] Active checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), inefficient keyset iterator (Java), liveness (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), Starvation analysis (C/C++/ObjC, Java), Self captured in block checker (C/C++/ObjC)
+[7234][environment] Infer log identifier is 
+Infer version v0.17.0-d84a9e0c1
+[7234][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[7234][environment] 
+[7234][   progress] Capturing in javac mode...
+[7234][      debug] Current working directory: '/home/andreeac/git/race-fix/examples/race/pfix'
+[7234][      debug] Trying to execute: javac '-J-Duser.language=en' '@/tmp/args_.tmp.c11044' 2>'/tmp/javac.tmp.e8093c.out'
+[7234][      debug] *** Failed: exited with code 2!
+[7234][      debug] 
+[7234][      debug] Trying to execute: javac '@/tmp/args_.tmp.c11044' 2>'/tmp/javac.tmp.e8093c.out'
+[7234][   user err] 
+*** Failed to execute compilation command: exited with code 2
+*** Command: javac '@/tmp/args_.tmp.c11044'
+*** Output:
+error: file not found: StringBuffer.java
+Usage: javac <options> <source files>
+use --help for a list of possible options
+
+*** Infer needs a working compilation command to run.
+
+[7234][   user err] Raised at file "stdlib.ml", line 449, characters 14-31
+Called from file "src/in_channel.ml" (inlined), line 72, characters 13-30
+Called from file "base/Utils.ml", line 231, characters 11-44
+

@@ -25,7 +25,7 @@ public class DLTest3 {
            events     = { LockAcquire(this.A), LockAcquire(this.B) };
            guard_map  = { };
            lock_state = { this.A -> LockAcquire(this.A) };
-           order      = { {first= this.A; eventually= LockAcquire(this.B)} }; ui= ⊥}
+           order      = { {first= this.A; eventually= LockAcquire(this.B)} }; ui=}
 
          */
         synchronized(A) {
@@ -56,7 +56,7 @@ public class DLTest3 {
            guard_map  = { };
            lock_state = { this.B -> LockAcquire(this.B) };
            order      = { {first= this.B; eventually= LockAcquire(this.A)} };
-           ui         = ⊥
+           ui         =
            }
         */
     }
