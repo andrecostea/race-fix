@@ -21,13 +21,13 @@ public class DLTest3 {
          */
         /**
            Starvation:
-           {
-           events     = { LockAcquire(this.A), LockAcquire(this.B) };
-           guard_map  = { };
-           lock_state = { this.A -> LockAcquire(this.A) };
-           order      = { {first= this.A; eventually= LockAcquire(this.B)} }; ui=}
-
-         */
+           { thread            = UnknownThread;
+             return_attributes = Nothing;
+             critical_pairs    = { {elem= {acquisitions= { }; event= LockAcquire(P<0>{(this:DLTest3*)->A})}; loc= line 31; trace= { }},
+                                   {elem= {acquisitions= { P<0>{(this:DLTest3*)->A} }; event= LockAcquire(P<0>{(this:DLTest3*)->B})}; loc= line 32; trace= { }} };
+             scheduled_work    = { };
+             attributes        = { }}
+          */
         synchronized(A) {
             synchronized(B) {
                 // do something with both resources
@@ -51,13 +51,12 @@ public class DLTest3 {
         }
         /**
            Starvation:
-           {
-           events     = { LockAcquire(this.A), LockAcquire(this.B) };
-           guard_map  = { };
-           lock_state = { this.B -> LockAcquire(this.B) };
-           order      = { {first= this.B; eventually= LockAcquire(this.A)} };
-           ui         =
-           }
+           { thread            = UnknownThread;
+             return_attributes = Nothing;
+             critical_pairs    = { {elem= {acquisitions= { }; event= LockAcquire(P<0>{(this:DLTest3*)->B})}; loc= line 47; trace= { }},
+                                   {elem= {acquisitions= { P<0>{(this:DLTest3*)->B} }; event= LockAcquire(P<0>{(this:DLTest3*)->A})}; loc= line 48; trace= { }} };
+             scheduled_work    = { };
+             attributes        = { }}
         */
     }
 }
