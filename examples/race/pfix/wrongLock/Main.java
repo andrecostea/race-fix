@@ -1,4 +1,7 @@
 package wrongLock;
+
+import com.facebook.infer.annotation.*;
+
 /**
  * @author Xuan
  * Created on Apr 27, 2005
@@ -7,6 +10,8 @@ package wrongLock;
    number of threads that have a lock on data             :  1
    number of threads that have a wrong lock on the class :  1
  */
+
+@ThreadSafe
 public class Main {
     static int iNum1=1;
     static int iNum2=1;
